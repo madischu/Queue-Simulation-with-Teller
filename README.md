@@ -20,3 +20,54 @@ The user enters:
 - Confirmation that each person was added to the queue
 - Teller greetings for each person in order
 - A closing message after the queue is empty
+
+## Compile and Run Instructions
+**Using g++**
+Compile:
+
+g++ main.cpp QueueFunctions.cpp -o queueProgram
+
+Run:
+
+./queueProgram
+
+## Design Documentation
+** Detailed Psuedocode
+
+Start program
+
+Create an empty queue of Person structs
+
+Ask user how many people will be in line
+While the number is less than 5
+    ask again
+
+For each person from 1 to total number of people
+    ask user for the person's name
+    create a Person struct
+    store the name
+    store the person's position number
+    push the Person into the queue
+
+Print a heading for teller output
+
+While the queue is not empty
+    get the person at the front of the queue
+    print "Hello [name], you are number [numberInLine] in line."
+    remove that person from the queue
+
+When the queue is empty
+    print "We are now closed, thanks for coming!"
+
+End program
+
+## UML Class Diagram
+<img width="347" height="211" alt="image" src="https://github.com/user-attachments/assets/7dcb141d-3e48-4d7b-b5ca-371ed5252737" />
+
+<img width="464" height="213" alt="image" src="https://github.com/user-attachments/assets/7f31264f-d08b-4ef9-94c8-f72f03e4ba33" />
+
+## Use Case Diagram
+<img width="442" height="906" alt="image" src="https://github.com/user-attachments/assets/1960b797-b22d-4976-a717-2fd538286a76" />
+
+## Program Execution Evidence
+

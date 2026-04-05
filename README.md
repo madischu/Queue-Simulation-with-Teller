@@ -23,6 +23,7 @@ The user enters:
 
 ## Compile and Run Instructions
 **Using g++**
+
 Compile:
 
 g++ main.cpp QueueFunctions.cpp -o queueProgram

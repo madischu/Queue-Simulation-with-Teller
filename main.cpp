@@ -1,49 +1,24 @@
 #include <iostream>
 #include <queue>
-#include <string>
+#include "QueueFunctions.h"
 using namespace std;
-
-// Struct to store person data
-struct Person
-{
-    string name;
-    int position;
-};
 
 int main()
 {
     queue<Person> line;
-    string name;
+    int totalPeople;
 
-    // Add at least 5 people
-    for (int i = 1; i <= 5; i++)
+    cout << "How many people are in line? (minimum 5): ";
+    cin >> totalPeople;
+
+    while (totalPeople < 5)
     {
-        cout << "Enter name for person " << i << ": ";
-        cin >> name;
-
-        Person p;
-        p.name = name;
-        p.position = i;
-
-        line.push(p);
+        cout << "You must enter at least 5 people. Try again: ";
+        cin >> totalPeople;
     }
 
-    cout << "\n--- Processing Queue ---\n";
-
-    // Teller processes queue
-    while (!line.empty())
-    {
-        Person current = line.front();
-
-        cout << "Hello " << current.name
-             << ", you are number "
-             << current.position << " in line.\n";
-
-        line.pop();
-    }
-
-    // Closing message
-    cout << "We are now closed, thanks for coming!" << endl;
+    addPeople(line, totalPeople);
+    servePeople(line);
 
     return 0;
 }
